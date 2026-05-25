@@ -1,0 +1,365 @@
+{
+  "Navbar": {
+    "servicios": "Services",
+    "galeria": "Portfolio",
+    "contactos": "Contacts",
+    "btn_contacto": "Contact"
+  },
+  "HomeHero": {
+    "titulo_1": "Design, development &",
+    "titulo_resaltado": "quality",
+    "titulo_2": " of the product.",
+    "subtitulo": "Clean code. Pixel-perfect design. Zero defects.",
+    "btn_proyectos": "Our projects",
+    "btn_info": "Learn more"
+  },
+  "Projects": {
+    "header_title": "Our work",
+    "header_desc": "We always adopt an individualized approach, focusing on the real expectations and requirements of each project.",
+    "btn_detalles": "Details",
+    "stat_1_text": "Years of experience",
+    "stat_2_text": "Delivered projects",
+    "stat_3_text": "Different industries",
+    "stat_4_text": "Quality control passed at launch.",
+    "feat_1_title": "Incredible websites",
+    "feat_1_desc": "As an international web studio, DL turns digital ambitions into reality by developing comprehensive digital ecosystems and web platforms that drive the development of spaces for the client's business.",
+    "feat_2_title": "Communication",
+    "feat_2_desc": "Our approach to communication goes beyond the simple exchange of information; it is about creating valuable alliances between clients and partners. We are available 24/7 to support and implement your ideas.",
+    "feat_3_title": "Maximum flexibility",
+    "feat_3_desc": "We offer unique solutions on our power platform as well as standard options. Regardless of your budget, we will find the ideal solution to achieve exceptional results.",
+    "contact_title": "Submit your request and we will take care of the rest!",
+    "contact_desc_1": "Recently, the studio has implemented projects for companies in Ukraine, Europe, and Argentina. In its work, DL combines technical expertise with a deep understanding of the client's needs. Web development always begins with an analysis of business objectives and culminates in a solution that truly works.",
+    "contact_desc_2": "Our services offer digital solutions for systematic customer interaction, sales growth, and strengthening online presence. The team works comprehensively, from analysis to implementation, promotion, and technical support. Every service is custom-developed.",
+    "country_ar": "Argentina",
+    "country_ua": "Ukraine",
+    "loc_ar": "Buenos Aires",
+    "loc_ua": "Lviv",
+    "btn_solicitud": "Submit a request"
+  },
+  "ProjectSection": {
+    "box_design": "Design",
+    "box_qa": "QA",
+    "box_experience": "Experience",
+    "title_start": "Solving problems",
+    "title_highlight": "#business",
+    "description": "We shape a global vision through a comprehensive approach. We implement a strategic system of changes that will lead your project to long-term results. We know that every project is different, as are the ways to boost it, and we take this into account in planning and execution."
+  },
+  "Hero": {
+      "tag": "Trabajo seleccionado",
+      "titulo": "Proyectos que <br></br> <verde>hablan</verde> por sí solos.",
+      "descripcion": "10 proyectos. Diseño, desarrollo y QA integrados. Cada uno construido con el mismo estándar de excelencia: funcional, rápido y con calidad garantizada desde el lanzamiento.",
+      "stat_1_val": "10+",
+      "stat_1_text": "Proyectos entregados",
+      "stat_2_val": "6",
+      "stat_2_text": "Industrias distintas",
+      "stat_3_val": "100%",
+      "stat_3_text": "QA aprobado al lanzar",
+      "stat_4_val": "3+",
+      "stat_4_text": "Años de experiencia"
+    },
+    "Portfolio": {
+    "Hero": {
+      "tag": "Selected work",
+      "titulo": "Projects that <br></br> <verde>speak</verde> for themselves.",
+      "descripcion": "10 projects. Integrated design, development, and QA. Each built to the same standard of excellence: functional, fast, and with guaranteed quality from launch.",
+      "stat_1_val": "10+",
+      "stat_1_text": "Delivered projects",
+      "stat_2_val": "6",
+      "stat_2_text": "Different industries",
+      "stat_3_val": "100%",
+      "stat_3_text": "QA passed at launch",
+      "stat_4_val": "3+",
+      "stat_4_text": "Years of experience"
+    },
+    "Tabs": {
+      "tab_1": "All",
+      "tab_2": "UI/UX Design",
+      "tab_3": "E-commerce",
+      "tab_4": "Corporate",
+      "tab_5": "Portals"
+    },
+    "Proyectos": {
+      "proy_1": {
+        "top_desc": "Your website is your 24/7 presentation letter. A modern, clean, and professional look generates instant credibility, naturally guiding the user to take action, whether it's buying, registering, or contacting.",
+        "btn_ver_mas": "See more",
+        "tag_principal": "UI/UX Design",
+        "titulo": "Web Redesign",
+        "bottom_desc": "In the digital environment, a website is not a static monument, but a living organism. Web redesign is not simply about changing colors or updating the logo; it's a strategic restructuring to align your platform with current market demands and user expectations.",
+        "tag_1": "Figma",
+        "tag_2": "Design",
+        "tag_3": "Website"
+      },
+      "proy_2": {
+        "top_desc": "Today, the smartphone is the center of the consumer's life. Creating an app for your product is not a luxury, but an indispensable strategic channel for Direct Connection, Loyalty and Experience, Constant Presence.",
+        "btn_ver_mas": "See more",
+        "tag_principal": "UI/UX Design",
+        "titulo": "App Design",
+        "bottom_desc": "An app transforms your product from an occasional option to a daily habit in the client's life. It allows you to reach the user instantly through push notifications, without depending on algorithms or emails that no one opens. An app offers speed, personalization, and an optimized user experience that a website cannot replicate. The client is just a tap away from your product.",
+        "tag_1": "Figma",
+        "tag_2": "Design",
+        "tag_3": "App"
+      },
+      "proy_3": {
+        "top_desc": "If your product isn't on the internet, for millions of people it simply doesn't exist. A website is your brand's headquarters and its importance comes with immediate advantages.",
+        "btn_ver_mas": "See more",
+        "tag_principal": "UI/UX Design",
+        "titulo": "Web Design",
+        "bottom_desc": "24/7 Visibility: Your product is available to be discovered, consulted, and purchased at any time, from anywhere in the world. Credibility and Control: Unlike social media, having your own website gives you total control over how you present your product, generating the trust the client needs to buy. Your Main Sales Channel: It centralizes information, resolves frequent doubts, and automates sales without relying on intermediaries.",
+        "tag_1": "Figma",
+        "tag_2": "Design",
+        "tag_3": "E-commerce"
+      },
+      "proy_4": {
+        "top_desc": "Selling on social media or third-party platforms is useful, but depending on them is dangerous. Your own website is the only digital territory that belongs entirely to you and is crucial for your business.",
+        "btn_ver_mas": "See more",
+        "tag_principal": "UI/UX Design",
+        "titulo": "Web Design",
+        "bottom_desc": "Identity without Distractions: On your website, there are no competitor ads or algorithms hiding your content. The client is 100% focused on your product's value. Own Data and Clients: It allows you to know who visits you, understand their behavior, and build a real database to connect with them whenever you want. The Anchor of Your Strategy: All traffic from your networks, ads, or recommendations must lead to a safe place. The website is the final destination where intentions become purchases.",
+        "tag_1": "Figma",
+        "tag_2": "Design",
+        "tag_3": "Website"
+      },
+      "proy_5": {
+        "top_desc": "Automating reservations smartly fills the room, saves staff time, and offers the agile service that today's public demands.",
+        "btn_ver_mas": "See more",
+        "tag_principal": "UI/UX Design",
+        "titulo": "App Design",
+        "bottom_desc": "Comfort without Barriers: The client reserves their table in seconds, at any time, and without phone calls. Less effort, more reservations. Control and Organization: Allows the restaurant to plan shifts, anticipate occupancy, and reduce wait times, maximizing the use of each table. Reduction of No-Shows: Sending automatic reminders drastically reduces forgotten reservations (no-shows) and frees up tables on time if there are cancellations.",
+        "tag_1": "Figma",
+        "tag_2": "Design",
+        "tag_3": "App"
+      },
+      "proy_6": {
+        "top_desc": "In e-commerce, a website is not optional; it is the core engine of the business. An e-commerce site is the asset that transforms a product catalog into a global, efficient, and scalable sales machine.",
+        "btn_ver_mas": "See more",
+        "tag_principal": "E-commerce",
+        "titulo": "E-commerce Design",
+        "bottom_desc": "24/7 Automated Sales: Your business generates revenue even while you sleep. The selection, payment, and shipping process is managed automatically and without interruptions. Reach Without Borders: Break the geographical limits of a physical store, allowing you to scale the business and reach clients in any city or country. Control of the Experience: You design the purchase path to your measure, analyze which products perform best, and retain your customers' data to sell to them again.",
+        "tag_1": "Figma",
+        "tag_2": "Design",
+        "tag_3": "E-commerce"
+      },
+      "proy_7": {
+        "top_desc": "A well-structured service portal not only informs but invites action. Simplifying the digital booking process is key to increasing clientele and conveying professionalism in the wellness sector.",
+        "btn_ver_mas": "See more",
+        "tag_principal": "Portals",
+        "titulo": "Website",
+        "bottom_desc": "Relaxing User Experience: The digital design reflects the tranquility of the physical space, using color palettes and typography that convey peace from the first click. Efficient Appointment Management: Integration of a reservation system that eliminates friction, allowing clients to schedule their appointments 24/7 without intermediaries. Brand Positioning: A solid platform consolidates client trust and elegantly highlights exclusive health and beauty services.",
+        "tag_1": "Figma",
+        "tag_2": "Design",
+        "tag_3": "Portals"
+      },
+      "proy_8": {
+        "top_desc": "When digital money comes into play, your own website is the only safe bridge between your product and the client's wallet. A website optimized for payments and transfers instantly transforms purchase intent into real, secure money.",
+        "btn_ver_mas": "See more",
+        "tag_principal": "E-commerce",
+        "titulo": "E-commerce Design",
+        "bottom_desc": "Guarantee and Security: A website with security certificates provides the necessary confidence for the client to make transfers or enter their payment data without fear of fraud. Centralized Process: Unites the catalog, cart, and payment gateway in one place. The client buys and transfers instantly, preventing them from changing their mind along the way. Automatic Reconciliation: Records each transaction transparently, making it easier to control income and stock without needing to manually verify each receipt.",
+        "tag_1": "Figma",
+        "tag_2": "Design",
+        "tag_3": "E-commerce"
+      },
+      "proy_9": {
+        "top_desc": "For a place of leisure, rest, or adventure, the website is the first step of the client's getaway. Your website is the gateway to the complex; if the digital experience is attractive and easy, the client will have already booked before leaving home.",
+        "btn_ver_mas": "See more",
+        "tag_principal": "E-commerce",
+        "titulo": "E-commerce Design",
+        "bottom_desc": "Anticipation of the Experience: Photos, videos, and interactive maps allow the user to \"live\" the place before going, awakening the desire to visit. Clear Reservations and Information: Centralizes rates, schedules, cabin availability or activities, and rules, avoiding saturating phone lines with repetitive questions. Attracting New Audiences: When people search Google for \"what to do this weekend\" or \"places to visit,\" an optimized website puts you directly on their radar.",
+        "tag_1": "Figma",
+        "tag_2": "Design",
+        "tag_3": "E-commerce"
+      },
+      "proy_10": {
+        "top_desc": "Making the decision to study in another country generates a lot of uncertainty. A website not only sells a program but is the anchor of trust and clarity that the student and their parents need.",
+        "btn_ver_mas": "See more",
+        "tag_principal": "Portals",
+        "titulo": "Website",
+        "bottom_desc": "Centralized Information Filter: Gathers requirements, costs, visa options, and destinations in one place, organizing a process that is often chaotic and overwhelming. Institutional Credibility: Studying abroad is a huge economic and life investment. A professional and transparent website demonstrates the support and seriousness that social networks fail to convey. Applicant Conversion: Makes it easy for the user to take the first step through advising forms, profile tests, or booking informative appointments with a single click.",
+        "tag_1": "Figma",
+        "tag_2": "Design",
+        "tag_3": "Portals"
+      },
+      "proy_11": {
+        "top_desc": "The digital presence of a global service network demands a structure that conveys maximum authority, trust, and international scale.",
+        "btn_ver_mas": "See more",
+        "tag_principal": "Corporate",
+        "titulo": "Corporate Portal",
+        "bottom_desc": "Complex Information Architecture: Clear organization of member firms, practice areas, and global jurisdictions. Premium and Sober Design: Minimalist aesthetics aligned with the corporate standards of the high-end legal sector. Global Connectivity: Optimized tools for the agile search of specialists and interaction between international partners.",
+        "tag_1": "Figma",
+        "tag_2": "Design",
+        "tag_3": "Corporate"
+      },
+      "proy_12": {
+        "top_desc": "Institutional and community platforms need to balance a high volume of dynamic data with smooth navigation that keeps users engaged.",
+        "btn_ver_mas": "See more",
+        "tag_principal": "Portals",
+        "titulo": "Portal Design",
+        "bottom_desc": "Dynamic and Intuitive Interface: Strategic distribution of multimedia content, news, and rankings for an immersive user experience. Performance Optimization: Robust technical structure prepared for traffic spikes and real-time updates. User Loyalty: Interaction zones and customized modules that reinforce a sense of community.",
+        "tag_1": "Figma",
+        "tag_2": "Design",
+        "tag_3": "Portals"
+      }
+    }
+  },
+ 
+  "Servicios": {
+    "Hero": {
+      "tag": "Services",
+      "titulo": "We build <br></br> <verde>digital tools</verde> <br></br> that work for you.",
+      "descripcion": "Strategic design and high-performance technical development, integrated into a single team with one goal: to grow your business.",
+      "item_1": "Design",
+      "item_2": "Development",
+      "item_3": "QA Analyst",
+      "item_4": "End-to-End Development"
+    },
+    "Diseno": {
+      "tag": "01 UI/UX Design",
+      "intro": "We focus our creativity on maximum functionality; we design strategic digital tools centered on your business goals.",
+      "titulo": "UI-UX Design: Interfaces that <verde>inspire</verde>, experiences that convert.",
+      "problema_tag": "The problem",
+      "problema_titulo": "The 'Pretty but useless' trap",
+      "problema_desc": "Many websites and apps look modern but fail at the most important thing: guiding the user. If your potential client doesn't find what they're looking for in the first 3 clicks, you lose them forever.",
+      "metodologia_tag": "Our Methodology (Pixel-Perfect)",
+      "metodologia": {
+        "paso1_tit": "Research and Architecture",
+        "paso1_desc": "Before choosing colors, we understand your user. We define the visual hierarchy and navigation flows.",
+        "paso2_tit": "Interactive Prototyping",
+        "paso2_desc": "We deliver navigable mockups so you can test how the product will feel before programming.",
+        "paso3_tit": "Development-Oriented Design",
+        "paso3_desc": "We deliver clean and ready assets. We create logical and perfectly optimized interfaces for development."
+      },
+      "auditoria_tag": "Our 'Stand-Alone' Proposal",
+      "auditoria_tit": "Audit and Redesign",
+      "auditoria_desc": "Already have a product on the market and want to maximize its performance? We conduct a comprehensive heuristic audit. We optimize interaction points, elevate interface fluidity, and redesign your platform focusing on boosting conversion rates and modernizing your visual identity.",
+      "entregables_tit": "What do we deliver?",
+      "entregable_1": "Complete UI Kit (Design system, typography, color palettes).",
+      "entregable_2": "High-fidelity interactive prototypes.",
+      "entregable_3": "Total adaptation for mobile devices (Mobile-First)."
+    },
+    "Desarrollo": {
+      "tag": "02 Development",
+      "intro": "We build technology designed to scale. We apply best practices with clean code and a solid architecture to secure your investment for the future.",
+      "titulo_inicio": "Solid architecture, extreme performance and ",
+      "titulo_resaltado": "clean code",
+      "titulo_fin": ".",
+      "problema_tag": "The problem",
+      "problema_titulo": "The hidden cost of bad code",
+      "problema_desc": "Hiring cheap development is always expensive. Messy code means slow platforms that Google penalizes, unstable systems under high traffic, and a technical nightmare when you want to add a new feature. Your business needs solid foundations to grow securely.",
+      "enfoque_tag": "Our Technical Approach",
+      "enfoque": {
+        "paso1_tit": "Modern and Fast Stack",
+        "paso1_desc": "We use the most efficient technologies on the market (such as React and Next.js) to guarantee millimeter load times and superior performance.",
+        "paso2_tit": "Scalability by Design",
+        "paso2_desc": "We deliver documented, clean, and understandable code. The product is yours, and if tomorrow another team needs to read it, they will understand it perfectly.",
+        "paso3_tit": "Transparency and Ownership",
+        "paso3_desc": "The code is yours. We deliver documented, clean, and tested repositories. We maintain constant communication regarding progress and technical decisions."
+      },
+      "figma_tag": "Our 'Stand-Alone' Proposal",
+      "figma_tit": "Figma to Code",
+      "figma_desc": "Has your design team already done their magic and you need the best builders? We take your files and transform them into a functional, responsive, and optimized digital product, respecting every pixel and original transition.",
+      "entregables_tit": "What do we deliver?",
+      "entregable_1": "High-performance web applications with optimized technical SEO.",
+      "entregable_2": "Clean, commented, and versioned source code.",
+      "entregable_3": "Seamless integration with databases and external APIs."
+    },
+    "QA": {
+      "tag": "03 Quality Assurance",
+      "intro": "We protect your brand's reputation. Your product goes to production with the certainty that we have validated every flow, every button, and every business rule.",
+      "titulo": "Zero defects, <verde>total confidence</verde> in every launch.",
+      "problema_tag": "The problem",
+      "problema_titulo": "The real impact of a bug in production",
+      "problema_desc": "An error in your system transcends the technical: it is a frustrated user who chooses the competition, an abandoned cart, or a collapsed support team. Fixing a defect in production multiplies costs; preventing it ensures the profitability and credibility of your company.",
+      "enfoque_tag": "Our Technical Approach",
+      "enfoque": {
+        "paso1_tit": "Business Validation",
+        "paso1_desc": "We evaluate the software with a comprehensive vision, ensuring it exactly meets the strategic objectives and needs of your business.",
+        "paso2_tit": "Rigorous Testing",
+        "paso2_desc": "We design exhaustive test cases and coverage matrices, executing regression tests to guarantee the total stability of the system.",
+        "paso3_tit": "Culture of Prevention",
+        "paso3_desc": "We get involved from the early stages of the project to detect areas for improvement and logical inconsistencies before the development stage."
+      },
+      "auditoria_tag": "Our 'Stand-Alone' Proposal",
+      "auditoria_tit": "Testing as a Service",
+      "auditoria_desc": "Ideal for development teams that program at high speed and seek to ensure a Senior quality filter. We integrate into your workflow, audit your platform, validate system behavior with technical precision, and give you the peace of mind to launch updates with high stability and optimized performance.",
+      "entregables_tit": "What do we deliver?",
+      "entregable_1": "Functional and usability test matrices.",
+      "entregable_2": "Detailed, prioritized improvement reports structured for efficient resolution.",
+      "entregable_3": "Quality certification and validation of acceptance criteria prior to each production release."
+    },
+    "CTA": {
+      "titulo": "Ready to build <br></br> something <verde>extraordinary</verde>?",
+      "subtitulo": "Tell us about your project and in less than 24 hours we will provide an initial diagnosis at no cost.",
+      "btn_conversacion": "Start a conversation",
+      "btn_trabajos": "See our work"
+    }
+  },
+  "Contacto": {
+    "Hero": {
+      "tag": "CONTACT",
+      "titulo": "Let's talk about your <br></br> <verde>next project.</verde>",
+      "descripcion": "Tell us what you have in mind. In less than 24 hours, we will respond with an initial, free, and no-obligation diagnosis.",
+      "stat_1_val": "<24h",
+      "stat_1_tit": "Response time",
+      "stat_1_desc": "We take every inquiry seriously.",
+      "stat_2_val": "100%",
+      "stat_2_tit": "Free diagnosis",
+      "stat_2_desc": "First consultation is always free.",
+      "stat_3_val": "3+",
+      "stat_3_tit": "Years of experience",
+      "stat_3_desc": "Integrated design, dev, and QA."
+    },
+    "Formulario": {
+      "tag": "CONTACT FORM",
+      "titulo": "Tell us about <br></br> your <verde>project.</verde>",
+      "lbl_nombre": "NAME",
+      "ph_nombre": "Your name",
+      "lbl_empresa": "COMPANY",
+      "ph_empresa": "Your company",
+      "lbl_email": "EMAIL",
+      "ph_email": "hello@yourcompany.com",
+      "lbl_servicio": "SERVICE OF INTEREST",
+      "ph_servicio": "Select a service",
+      "opt_1": "UI/UX Design",
+      "opt_2": "Web Development",
+      "opt_3": "QA & Testing",
+      "opt_4": "Integral Project",
+      "lbl_presupuesto": "ESTIMATED BUDGET",
+      "ph_presupuesto": "Investment range",
+      "lbl_mensaje": "YOUR MESSAGE",
+      "ph_mensaje": "Tell us about your project, goals, timelines, and any relevant detail...",
+      "btn_enviar": "Send message",
+      "footer_form": "We respond within 24 working hours.",
+      "info_email_tit": "DIRECT EMAIL",
+      "info_email_val": "design.and.logic.studio@gmail.com",
+      "info_wa_tit": "WHATSAPP",
+      "info_wa_val": "+54 9 11 3058-3475",
+      "info_serv_tit": "AVAILABLE SERVICES",
+      "serv_1": "UI/UX Design",
+      "serv_2": "Web Development",
+      "serv_3": "QA & Testing",
+      "serv_4": "Integral Project",
+      "status_tit": "Available now",
+      "status_desc": "We respond within 24 working hours."
+    },
+    "Footer": {
+     
+      "estudio": "STUDIO",
+      "horario": "BUSINESS HOURS",
+      "tambien": "ALSO ON"
+    }
+  },
+  "Footer": {
+  "copyright": "© 2026 Design & Logic. All rights reserved."
+},
+    "ContactSteps": {
+    "tag": "What happens next?",
+    "step1_title": "We receive your inquiry",
+    "step1_desc": "We analyze your message and prepare an initial diagnosis of your project.",
+    "step2_title": "We respond",
+    "step2_desc": "In less than 24 business hours, we'll contact you with questions and initial ideas.",
+    "step3_title": "Discovery meeting",
+    "step3_desc": "A 30-minute call to deeply understand your business, goals, and timelines.",
+     "step4_title": "Custom proposal",
+    "step4_desc": "We send you a detailed proposal with scope, timelines, and budget. No surprises."
+    }
+}
