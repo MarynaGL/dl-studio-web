@@ -18,6 +18,7 @@ export async function generateMetadata({ params: { locale } }) {
       url: 'https://www.designandlogic.com',
       siteName: 'Diseño & Lógica',
       type: 'website',
+      images: ['/Vector.png'],
     },
   };
 }
