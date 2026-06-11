@@ -2,7 +2,25 @@ import Hero from '@/components/Hero';
 import FeatureBanner from '@/components/FeatureBanner';
 import ProjectSection from '@/components/ProjectSection';
 import Projects from '@/components/Projects';
+import { getTranslations } from 'next-intl/server';
 
+// Esta función mágica le dice a Google de qué trata tu página en cada idioma
+export async function generateMetadata({ params: { locale } }) {
+  const t = await getTranslations({ locale, namespace: 'SEO' });
+
+  return {
+    title: t('titulo'),
+    description: t('descripcion'),
+    // Esto genera etiquetas para redes sociales (cuando pasas el link por WhatsApp)
+    openGraph: {
+      title: t('titulo'),
+      description: t('descripcion'),
+      url: 'https://www.designandlogic.com',
+      siteName: 'Diseño & Lógica',
+      type: 'website',
+    },
+  };
+}
 // src/app/[locale]/page.js
 export default async function Home({ params }) {
   const { locale } = await params;

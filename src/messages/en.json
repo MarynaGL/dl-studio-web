@@ -396,5 +396,9 @@
     "step3_desc": "A 30-minute call to deeply understand your business, goals, and timelines.",
      "step4_title": "Custom proposal",
     "step4_desc": "We send you a detailed proposal with scope, timelines, and budget. No surprises."
-    }
+    },
+    "SEO": {
+  "titulo": "Diseño & Lógica | Web Development & QA Testing Agency",
+  "descripcion": "Studio specializing in UI/UX design, web development, and quality assurance (QA). We build fast, modern, and bug-free digital products."
+}
 }
