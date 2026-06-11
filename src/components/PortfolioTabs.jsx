@@ -17,7 +17,7 @@ export default function PortfolioTabs({ activeTab, setActiveTab }) {
   return (
      <section className="w-full flex justify-center bg-[#F7F7F7]">
   {/* Pasamos el pt-32 y pb-16 a este div */}
-  <div className="w-full max-w-[1440px] px-8 lg:px-[60px] flex flex-col pt-32 pb-0 border-l border-r border-[#D9D6D3]">
+  <div className="w-full px-4 md:px-8 lg:px-[60px] flex flex-col relative">
         
         {/* Contenedor de las solapas con la línea gris de base */}
         <div className="flex items-center gap-8 lg:gap-12 border-b border-[#dddcda]">

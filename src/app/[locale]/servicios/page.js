@@ -3,30 +3,28 @@ import ServiceDesign from '@/components/ServiceDesign';
 import ServiceDev from '@/components/ServiceDev';
 import ServiceQA from '@/components/ServiceQA';
 import ServiceEndToEnd from '@/components/ServiceEndToEnd';
+import ServiceFooter from '@/components/ServiceFooter';
 
-
-// src/app/[locale]/page.js
 export default async function Servicios({ params }) {
   const { locale } = await params;
   
   return (
-    <main className="min-h-screen w-full flex flex-col items-center bg-[#F7F7F7]">
-      {/* ... el resto de tu código queda igual */}
+    // Quitamos el items-center del main para que no trate de centrar a la fuerza
+    <main className="min-h-screen w-full flex flex-col bg-[#F7F7F7]">
       
-      {/* 2. EL TUBO MAESTRO: Bloque blanco, centrado, máximo 1440px */}
-      <div className="w-full max-w-[1440px] bg-white relative overflow-hidden shadow-sm">
+      {/* ¡ACÁ ESTABA EL CULPABLE! 
+          Le borramos el max-w-[1440px]. Ahora este contenedor maestro es 100% libre. */}
+      <div className="w-full relative overflow-hidden">
         
-        {/* Adentro tiramos todos los componentes, ellos heredarán este límite */}
-        
-       
         <ServicesHero />
         <ServiceDesign />
         <ServiceDev />
         <ServiceQA />
         <ServiceEndToEnd />
-        
+        <ServiceFooter />
         
       </div>
       
-    </main>  );
+    </main>  
+  );
 }

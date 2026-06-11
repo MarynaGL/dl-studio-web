@@ -6,7 +6,7 @@ export default function ServiceDev() {
     const t = useTranslations('Servicios.Desarrollo');
   return (
     <section id="desarrollo" className="w-full flex justify-center bg-[#f8f8f6] py-20 overflow-hidden">
-      <div className="w-full max-w-[1440px] px-8 lg:px-[60px] flex flex-col">
+      <div className="w-full px-4 md:px-8 lg:px-[60px] relative">
         
         {/* LÍNEA SEPARADORA SUPERIOR Y ETIQUETA */}
         <div className="w-full border-t border-[#939390]/30 pt-4 flex items-center gap-2 mb-10">
@@ -18,7 +18,7 @@ export default function ServiceDev() {
 
         {/* HEADER DE LA SECCIÓN */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end w-full mb-16">
-          <span className="text-[120px] lg:text-[180px] font-inter font-bold text-[#e4e4e4] leading-none select-none">
+          <span className="text-[120px] lg:text-[180px] font-inter font-normal text-[#e4e4e4] leading-none select-none">
             02
           </span>
           <p className="text-[14px] font-inter font-light text-[#939390] max-w-[350px] leading-relaxed mb-6 lg:mb-12">
@@ -27,7 +27,7 @@ export default function ServiceDev() {
         </div>
 
         {/* TÍTULO PRINCIPAL (Separado en 3 partes para mantener el diseño) */}
-        <h2 className="text-[48px] lg:text-[64px] font-inter font-bold text-[#18181A] leading-[1.1] tracking-tight max-w-[900px] mb-20">
+        <h2 className="text-[48px] lg:text-[64px] font-inter font-normal text-[#18181A] leading-[1.1] tracking-tight max-w-[900px] mb-20">
           {t('titulo_inicio')} <span className="text-[#6b9e7a] italic font-medium">{t('titulo_resaltado')}</span>{t('titulo_fin')}
         </h2>
 

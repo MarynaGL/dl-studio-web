@@ -4,10 +4,8 @@ import SectionTag from '@/components/SectionTag';
 import { useTranslations } from 'next-intl';
 
 export default function ServicesHero() {
-  // Inicializamos el traductor apuntando a la sección Hero de Servicios
   const t = useTranslations('Servicios.Hero');
 
-  // Construimos la lista mezclando los links fijos con los textos traducidos
   const serviciosList = [
     { num: "01", name: t('item_1'), href: "#diseno" },
     { num: "02", name: t('item_2'), href: "#desarrollo" },
@@ -16,36 +14,32 @@ export default function ServicesHero() {
   ];
 
   return (
-    // 1. Fondo general igual al Hero de la Home
-    <section className="w-full flex justify-center bg-[#F7F7F7] min-h-[791px] overflow-hidden pt-32 pb-16">
+    // 1. pt-[160px] para que tenga aire arriba y no se pegue al navbar
+    <section className="w-full flex justify-center bg-[#F7F7F7] overflow-hidden pt-[120px] lg:pt-[160px] pb-16 lg:pb-24">
     
-    {/* 2. Contenedor Maestro de 1440px */}
-    <div className="w-full max-w-[1440px] px-8 lg:px-[60px] flex flex-col">
-      
-      {/* --- ETIQUETA SUPERIOR IZQUIERDA --- */}
-      <SectionTag text={t('tag')} />
+      {/* 2. px-[60px] garantiza los 60px de margen que querés a los costados */}
+      <div className="w-full px-4 md:px-8 lg:px-[60px] relative">
+        
+        <SectionTag text={t('tag')} />
 
-        {/* --- CONTENIDO PRINCIPAL (Headline y Lista) --- */}
-        <div className="flex flex-col lg:flex-row justify-between items-center w-full ">
+        {/* CONTENEDOR FLEX: justify-between empuja los hijos a los extremos */}
+        <div className="w-full flex flex-col lg:flex-row lg:justify-between items-start mt-10 lg:mt-12">
           
-          {/* LADO IZQUIERDO: El gran Título */}
-          <div className="flex w-full lg:w-auto">
-            {/* Línea verde lateral (4px de ancho) */}
-            <div className="w-[4px] bg-[#6b9e7a] shrink-0 min-h-[390px]"></div>
+          {/* --- LADO IZQUIERDO (Ocupa el 60% de la pantalla) --- */}
+          <div className="flex items-stretch w-full lg:w-[60%]">
+            <div className="w-[4px] bg-[#6b9e7a] shrink-0"></div>
             
-            {/* Contenedor del texto (Desplazado 64px a la izquierda y 60px arriba) */}
-            <div className="flex flex-col pt-[60px] pb-10 pl-8 lg:pl-[64px] max-w-[500px]">
+            <div className="flex flex-col justify-center py-2 pl-6 lg:pl-[40px] w-full">
               
-              {/* Título (Con soporte para salto de línea y color) */}
-              <h1 className="text-[48px] lg:text-[58px] font-inter font-normal leading-[1.1] tracking-[-1px] text-[#18181A] mb-12">
+              {/* TÍTULO: max-w-[800px] le da todo el espacio del mundo para no cortarse */}
+              <h1 className="text-[40px] md:text-[50px] lg:text-[58px] font-inter font-normal leading-[1.1] tracking-[-1px] text-[#18181A] mb-8 lg:mb-10 w-full max-w-[800px]">
                 {t.rich('titulo', {
                   verde: (chunks) => <span className="text-[#6b9e7a] italic">{chunks}</span>,
-                  br: () => <br />
+                  br: () => <br className="hidden sm:block" />
                 })}
               </h1>
               
-              {/* Párrafo con borde izquierdo */}
-              <div className="border-l-[1.6px] border-[#dddcda] pl-[20px]">
+              <div className="border-l-[1.6px] border-[#dddcda] pl-[20px] max-w-[500px]">
                 <p className="text-[14px] font-inter font-light text-[#939390] leading-[25.9px]">
                   {t('descripcion')}
                 </p>
@@ -54,18 +48,17 @@ export default function ServicesHero() {
             </div>
           </div>
 
-          {/* LADO DERECHO: Lista de servicios */}
-          <div className="relative mt-20 lg:mt-0">
-            
-            {/* Lista Vertical */}
-            <ul className="flex flex-col gap-6 border-l border-[#939390]/30 pl-8">
+          {/* --- LADO DERECHO (Ocupa el 35% de la pantalla y se alinea al final) --- */}
+          <div className="w-full lg:w-[35%] flex lg:justify-end mt-12 lg:mt-0">
+            {/* w-max asegura que la lista se recueste sobre el borde derecho */}
+            <ul className="flex flex-col gap-6 border-l border-[#939390]/30 pl-6 md:pl-8 w-max">
               {serviciosList.map((item, index) => (
                 <li key={index} className="flex items-center gap-4 group cursor-default">
                   <Link href={item.href} className="flex items-center gap-4 cursor-pointer">
                     <span className="text-[14px] font-inter text-[#939390] group-hover:text-[#6b9e7a] transition-colors">
                       {item.num}
                     </span>
-                    <span className="text-[18px] font-inter font-medium text-[#404040] group-hover:text-[#6b9e7a] transition-colors">
+                    <span className="text-[18px] md:text-[20px] font-inter font-medium text-[#404040] group-hover:text-[#6b9e7a] transition-colors whitespace-nowrap">
                       {item.name}
                     </span>
                   </Link>
@@ -73,8 +66,8 @@ export default function ServicesHero() {
               ))}
             </ul>
           </div>
+          
         </div>
-
        </div> 
     </section>
   );

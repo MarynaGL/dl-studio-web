@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 export default function ContactForm() {
   const t = useTranslations('Contacto.Formulario');
 
-  // 1. Estados para guardar los datos del formulario y el estado del envío
   const [formData, setFormData] = useState({
     nombre: '',
     empresa: '',
@@ -17,19 +17,16 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  // 2. Función para actualizar los datos mientras el usuario escribe
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  // 3. Función que se ejecuta al presionar "Enviar"
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-try {
-      // ¡Acá estaba el cambio clave! El fetch ahora apunta a Web3Forms
+    try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
@@ -53,7 +50,6 @@ try {
 
       if (response.ok && result.success) {
         setIsSuccess(true);
-        // Limpiamos el formulario
         setFormData({
           nombre: '',
           empresa: '',
@@ -63,7 +59,6 @@ try {
           mensaje: ''
         });
         
-        // Ocultamos el mensaje de éxito después de 5 segundos
         setTimeout(() => {
           setIsSuccess(false);
         }, 5000);
@@ -78,9 +73,17 @@ try {
     }
   };
 
+  const servicesLinks = [
+    { id: 1, link: '/servicios#diseno' },
+    { id: 2, link: '/servicios#desarrollo' },
+    { id: 3, link: '/servicios#qa' },
+    { id: 4, link: '/servicios#punta-a-punta' }
+  ];
+
   return (
     <section className="w-full flex justify-center bg-[#F7F7F7]">
-      <div className="w-full max-w-[1440px] px-8 lg:px-[60px] flex flex-col md:flex-row items-stretch border-l border-r border-[#D9D6D3] bg-[#f7f7f7]">
+      <div className="w-full max-w-[1440px] px-8 lg:px-[60px] flex flex-col md:flex-row items-stretch bg-[#f7f7f7]">
+        
         {/* COLUMNA IZQUIERDA: FORMULARIO */}
         <div className="w-full md:w-1/2 md:pr-16 flex flex-col">
           
@@ -98,10 +101,7 @@ try {
             })}
           </h2>
 
-          {/* Formulario vinculado a handleSubmit */}
-          {/* <form className="flex flex-col gap-6" onSubmit={handleSubmit}> */}
-          {/* Poné esto: */}
-            <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
+          <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
             <input type="hidden" name="_captcha" value="false" />
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex flex-col flex-1 gap-2">
@@ -140,24 +140,27 @@ try {
               <textarea required name="mensaje" value={formData.mensaje} onChange={handleChange} placeholder={t('ph_mensaje')} rows="4" className="w-full bg-[#f4f4f2] text-[13px] text-[#18181A] px-4 py-3 rounded-sm outline-none focus:ring-1 focus:ring-[#6b9e7a] transition-all resize-none"></textarea>
             </div>
 
-            {/* Botón dinámico (Cambia de texto si está cargando o si tuvo éxito) */}
             <button 
-              type="submit" 
-              disabled={isSubmitting}
-              className={`w-full text-white font-inter text-[14px] py-4 rounded-sm transition-colors mt-2 ${isSuccess ? 'bg-[#6b9e7a]' : 'bg-[#18181A] hover:bg-[#2c2c2f]'} ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
-            >
-              {isSubmitting ? 'Enviando...' : isSuccess ? '¡Mensaje Enviado!' : t('btn_enviar')}
-            </button>
+  type="submit" 
+  disabled={isSubmitting}
+  className={`w-full text-white font-inter text-[14px] py-4 rounded-sm mt-2 transition-all duration-300 
+    ${isSuccess ? 'bg-[#6b9e7a]' : 'bg-[#18181A] hover:bg-[#60A572]'} 
+    ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+>
+  {isSubmitting 
+    ? t('btn_enviando') 
+    : isSuccess 
+      ? t('btn_exito') 
+      : t('btn_enviar')
+  }
+</button>
 
-            <div className="flex items-center gap-2 mt-1">
-              <div className="w-[6px] h-[6px] rounded-full border border-[#6b9e7a]"></div>
-              <span className="text-[11px] font-inter text-[#939390]">{t('footer_form')}</span>
-            </div>
+            {/* SE ELIMINÓ EL TEXTO "Respondemos en menos de 24 horas hábiles." DE ACÁ */}
 
           </form>
         </div>
 
-        {/* COLUMNA DERECHA: BLOQUE OSCURO (Se mantiene igual) */}
+        {/* COLUMNA DERECHA: BLOQUE OSCURO */}
         <div className="w-full md:w-1/2 bg-[#18181A] p-10 md:p-14 flex flex-col mt-12 md:mt-0 relative">
           
           <div className="flex flex-col mb-8 border-b border-[#333333] pb-6">
@@ -177,15 +180,16 @@ try {
           <div className="flex flex-col mb-12">
             <span className="text-[10px] font-inter text-[#6b9e7a] uppercase tracking-[2px] mb-6">{t('info_serv_tit')}</span>
             <div className="flex flex-col gap-3">
-              {[1, 2, 3, 4].map((num) => (
-                <div key={num} className="bg-[#212124] px-6 py-4 flex justify-between items-center rounded-sm">
-                  <span className="text-[13px] font-inter text-[#dddcda]">{t(`serv_${num}`)}</span>
-                  <span className="text-[12px] font-inter text-[#555555]">0{num}</span>
-                </div>
+              {servicesLinks.map((srv) => (
+                <Link href={srv.link} key={srv.id} className="bg-[#212124] px-6 py-4 flex justify-between items-center rounded-sm hover:bg-[#60A572] transition-all duration-300">
+                  <span className="text-[13px] font-inter text-[#dddcda] group-hover:text-[#6b9e7a] transition-colors">{t(`serv_${srv.id}`)}</span>
+                  <span className="text-[12px] font-inter text-[#555555] group-hover:text-[#6b9e7a] transition-colors">0{srv.id}</span>
+                </Link>
               ))}
             </div>
           </div>
 
+          {/* SE RESTAURÓ LA CAJA VERDE "Disponibles ahora" */}
           <div className="mt-auto bg-[#eef5f0] p-6 flex items-start gap-4 rounded-sm">
             <div className="w-2 h-2 rounded-full bg-[#6b9e7a] mt-1.5 shrink-0"></div>
             <div className="flex flex-col">

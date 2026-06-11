@@ -16,7 +16,7 @@ export default function ContactSteps() {
   return (
     // Mantenemos el pb-32 para dar respiro antes del Footer global
     <section className="w-full flex justify-center bg-[#F7F7F7]">
-      <div className="w-full max-w-[1440px] px-8 lg:px-[60px] flex flex-col md:flex-row items-stretch border-l border-r border-[#D9D6D3] bg-[#f7f7f7]">
+      <div className="w-full max-w-[1440px] px-8 lg:px-[60px] flex flex-col md:flex-row items-stretch  bg-[#f7f7f7]">
       
         
         {/* LA CAJA BEIGE/GRIS CLARO DEL DISEÑO */}

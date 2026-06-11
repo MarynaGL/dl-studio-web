@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import PortfolioHero from '@/components/PortfolioHero';
 import PortfolioTabs from '@/components/PortfolioTabs';
 import PortfolioGrid from '@/components/PortfolioGrid';
-import ScrollUpArrow from '@/components/ScrollUpArrow'; // 1. Importamos la flecha existente
+import ScrollUpArrow from '@/components/ScrollUpArrow';
 
 export default function PortfolioPage() {
   const [activeTab, setActiveTab] = useState('tab_1');

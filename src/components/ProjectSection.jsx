@@ -5,72 +5,131 @@ const ProjectSection = () => {
   const t = useTranslations('ProjectSection');
 
   return (
-    <section className="w-full flex justify-center bg-[#F7F7F7]">
+    <section className="w-full flex justify-center bg-[#F7F7F7] overflow-hidden relative z-10">
       
-      {/* Contenedor Maestro */}
-      <div className="w-full max-w-[1440px] px-8 lg:px-[60px] flex flex-col pt-32 pb-16 border-l border-r border-[#D9D6D3]">
+      <div className="w-full px-4 md:px-8 lg:px-24 flex flex-col pt-32 pb-16 overflow-visible relative">
 
-        {/* ========================================================= */}
-        {/* FILA 1: Gráfico (Izq) y Texto (Der) */}
-        {/* ========================================================= */}
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start w-full">
+        {/* 1. ELIMINAMOS LOS GAPS: Para que la matemática de los porcentajes sea exacta, sacamos el gap-8 */}
+        <div className="flex flex-col lg:flex-row w-full mt-12 lg:mt-0">
           
-          {/* COLUMNA IZQUIERDA: GRUPO CAJA GRIS */}
-          <div className="relative w-[448px] max-w-full h-[570px] flex-shrink-0 bg-[#e4e4e4] overflow-visible">
+          {/* ========================================================= */}
+          {/* COLUMNA IZQUIERDA: 1/3 EXACTO DE LA PANTALLA (Coincide con "Design") */}
+          {/* ========================================================= */}
+          <div className="w-full lg:w-1/3 flex justify-center lg:justify-end -mt-[60px] lg:-mt-[160px] relative z-20"> 
             
-            {/* Fondo Base */}
-            <div className="absolute top-[115.2px] left-[108.78px] w-[311.22px] h-[299.64px] bg-[#f4f2ec]"></div>
+            {/* 2. LA MAGIA DEL TRANSLATE: 
+                Al mover el gráfico un 51% hacia la derecha (translate-x-[51%]), 
+                su línea central queda perfectamente apoyada en la frontera del 1/3 de la pantalla. */}
+            <div className="w-full max-w-[448px] lg:translate-x-[44%]">
+<svg 
+              className="w-full h-auto" 
+              viewBox="0 0 448 525" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <g clipPath="url(#clip0_126_513)">
+                <rect width="448" height="525" fill="white"/>
+                <path d="M420 115.199H108.782V414.839H420V115.199Z" fill="#F4F2EC"/>
+                <path d="M218 117H111V254H218V117Z" fill="#6B9E7A"/>
+                <path d="M417.712 287.051H218.624V412.635H417.712V287.051Z" fill="#939390"/>
+                <path d="M418 117H356V198H418V117Z" fill="#F5C10A"/>
+                <path d="M173 347H111V413H173V347Z" fill="#939390"/>
+                <path d="M353.637 117.403H305.582V196.719H353.637V117.403Z" fill="#F4F2EC"/>
+                <path d="M173 287H111V347H173V287Z" fill="#404040"/>
+                <path d="M111 117.403H417" stroke="#939390" strokeWidth="2" strokeLinecap="square"/>
+                <path d="M1 287.051H416.5" stroke="#939390" strokeWidth="2" strokeLinecap="square"/>
+                <path d="M111.07 117.5V413" stroke="#939390" strokeWidth="2" strokeLinecap="square"/>
+                <path d="M218.624 -0.5V287.051" stroke="#939390" strokeWidth="2" strokeLinecap="square"/>
+                <path d="M218.624 287.051V413" stroke="#939390" strokeWidth="2" strokeLinecap="square"/>
+                <path d="M305.582 117.5V287.051" stroke="#939390" strokeWidth="2" strokeLinecap="square"/>
+                <path d="M355.926 117.5V525" stroke="#939390" strokeWidth="2" strokeLinecap="square"/>
+                <path d="M417 118V413" stroke="#939390" strokeWidth="2" strokeLinecap="square"/>
+                <path d="M172.856 287.051V413" stroke="#939390" strokeWidth="2" strokeLinecap="square"/>
+                <path d="M356 199H415.5" stroke="#939390" strokeWidth="2" strokeLinecap="square"/>
+                <path d="M110 413H416.218" stroke="#939390" strokeWidth="2" strokeLinecap="square"/>
+                
+                {/* ========================================================= */}
+                {/* TEXTOS TRADUCIBLES REALES (Sustituyen a los antiguos paths) */}
+                {/* ========================================================= */}
 
-            {/* 1. CAJAS DE COLORES Y GRISES */}
-            <div className="absolute top-[117px] left-[111px] w-[108px] h-[137px] bg-[#6b9e7a] flex items-center justify-center">
-               <span className="absolute top-[21px] text-white font-inter text-[20px] rotate-[90deg] tracking-wider uppercase lg:normal-case">
-                 {t('box_design')}
-               </span>
+                {/* 1. DISEÑO: Rotado 90 grados en sentido horario para quedar vertical*/}
+                <text 
+                  x="166" 
+                  y="125" 
+                  fill="#F8F8F6" 
+                  fontFamily="Inter, sans-serif"
+                  fontSize="15px"
+                  fontWeight="bold"
+                  letterSpacing="1px"
+                  transform="rotate(90 166 125)"
+                  textAnchor="start"
+                >
+                  {t('box_design')}
+                </text>
+                
+                {/* 2. EXPERIENCIA: Centrado horizontalmente en la caja gris inferior */}
+                <text 
+                  x="343" 
+                  y="406" 
+                  fill="#F8F8F6" 
+                  fontFamily="Inter, sans-serif"
+                  fontSize="15px"
+                  fontWeight="bold"
+                  letterSpacing="0.5px"
+                  textAnchor="middle"
+                >
+                  {t('box_experience')}
+                </text>
+                
+                {/* 3. QA: Centrado perfectamente en el recuadro amarillo */}
+                <text 
+                  x="387" 
+                  y="172" 
+                  fill="#F8F8F6" 
+                  fontFamily="Inter, sans-serif"
+                  fontSize="15px"
+                  fontWeight="bold"
+                  textAnchor="middle"
+                >
+                  {t('box_qa')}
+                </text>
+
+              </g>
+              <defs>
+                <clipPath id="clip0_126_513">
+                  <rect width="448" height="525" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
             </div>
-
-            <div className="absolute top-[287px] left-[111px] w-[62px] h-[60px] bg-[#404040]"></div>
-            <div className="absolute top-[347px] left-[111px] w-[62px] h-[66px] bg-[#939390]"></div>
-
-            <div className="absolute top-[117px] left-[356px] w-[62px] h-[82px] bg-[#f5c10a] flex items-center justify-center">
-               <span className="text-white font-inter font-bold">{t('box_qa')}</span>
-            </div>
-
-            <div className="absolute top-[288.05px] left-[218.62px] w-[199.09px] h-[125.58px] bg-[#939390] flex items-end justify-end p-3">
-               <span className="text-white font-inter text-[19px] font-medium tracking-wide">
-                 {t('box_experience')}
-               </span>
-            </div>
-
-            {/* 2. VECTORES (Líneas Divisorias) */}
-            <div className="absolute top-[-0.5px] left-[218.62px] w-[2px] h-[287.55px] bg-[#939390]"></div>
-            <div className="absolute top-[118px] left-[417px] w-[2px] h-[295px] bg-[#939390]"></div>
-            <div className="absolute top-[117.5px] left-[111.07px] w-[2px] h-[295.5px] bg-[#939390]"></div>
-            <div className="absolute top-[117.5px] left-[305.58px] w-[2px] h-[169.55px] bg-[#939390]"></div>
-            <div className="absolute top-[287.05px] left-[172.86px] w-[2px] h-[125.95px] bg-[#939390]"></div>
-            <div className="absolute top-[287.05px] left-[1px] w-[415.5px] h-[2px] bg-[#939390]"></div>
-            <div className="absolute top-[117.4px] left-[111px] w-[306px] h-[2px] bg-[#939390]"></div>
-            <div className="absolute top-[413px] left-[111px] w-[307.22px] h-[2px] bg-[#939390]"></div>
-            <div className="absolute top-[198px] left-[356px] w-[60px] h-[2px] bg-[#939390]"></div>
-            <div className="absolute top-[117.5px] left-[355.93px] w-[2px] h-[407.5px] bg-[#939390]"></div>
           </div>
-      
-          {/* COLUMNA DERECHA: Bloque de Texto */}
-          <div className="w-full max-w-[429px] mt-10 lg:mt-[120px] px-4 lg:px-0">
-            <h2 className="font-inter font-semibold text-[24px] leading-tight text-black mb-4">
-              {t('title_start')} <br />
-              <span className="text-[#6b9e7a]">{t('title_highlight')}</span>
-            </h2>
-            <p className="font-inter font-light text-[14px] leading-relaxed text-black opacity-80">
-              {t('description')}
-            </p>
+
+         {/* ========================================================= */}
+          {/* COLUMNA DERECHA: 2/3 EXACTOS DE LA PANTALLA */}
+          {/* ========================================================= */}
+          <div className="w-full lg:w-2/3 flex flex-col justify-center items-center mt-12 lg:mt-0">
+            
+            {/* TUS DOS JOYSTICKS DE PRECISIÓN: 
+                1. lg:translate-x-[10%] -> Mueve el texto hacia los costados (Eje X)
+                2. lg:-translate-y-[80px] -> Sube el texto hacia arriba (Eje Y)
+            */}
+            <div className="w-full max-w-[429px] lg:translate-x-[15%] lg:-translate-y-[80px]">
+              <h2 className="font-inter font-semibold text-[24px] lg:text-[32px] leading-tight text-black mb-4">
+                {t('title_start')} <br />
+                <span className="text-[#6b9e7a]">{t('title_highlight')}</span>
+              </h2>
+              <p className="font-inter font-light text-[14px] lg:text-[16px] leading-relaxed text-black opacity-80">
+                {t('description')}
+              </p>
+            </div>
+
           </div>
 
         </div>
 
-        {/* ========================================================= */}
-        {/* FILA 2: Logo Diseño & Lógica (Ubicación exacta según Figma) */}
-        {/* ========================================================= */}
-        <div className="w-full flex justify-center mt-16 lg:mt-[80px]">
+        {/* FILA 2: Logo */}
+        <div className="w-full flex justify-center mt-16 lg:mt-24">
           <Image 
             src="/DisenoAndLogica.png" 
             alt="Diseño y Lógica Logo" 

@@ -9,7 +9,7 @@ export default function ContactHero() {
     // Fondo general blanco para contrastar con las tarjetas
     <section className="w-full flex justify-center bg-[#F7F7F7]">
   {/* Pasamos el pt-32 y pb-16 a este div */}
-  <div className="w-full max-w-[1440px] px-8 lg:px-[60px] flex flex-col pt-32 pb-16 border-l border-r border-[#D9D6D3]">  
+  <div className="w-full max-w-[1440px] px-8 lg:px-[60px] flex flex-col pt-32 pb-16 ">  
         {/* ========================================= */}
         {/* ETIQUETA SUPERIOR (CONTACTO)              */}
         {/* ========================================= */}

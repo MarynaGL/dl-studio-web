@@ -13,6 +13,15 @@
     "btn_proyectos": "Nuestros proyectos",
     "btn_info": "Más información"
   },
+  "FeatureBanner": {
+  "design_title": "Diseño",
+  "design_subtitle": "Creación UI/UXt",
+  "dev_title": "Desarrollo",
+  "dev_subtitle": "Código limpio",
+  "qa_title": "Calidad",
+  "qa_subtitle": "Cero defectos"
+
+},
   "Projects": {
     "header_title": "Nuestros trabajos",
     "header_desc": "Siempre adoptamos un enfoque individualizado, centrado en las expectativas y requerimientos reales de cada proyecto.",
@@ -272,6 +281,30 @@
       "entregable_2": "Reportes de mejoras detallados, priorizados y estructurados para una resolución eficiente.",
       "entregable_3": "Certificación de calidad y validación de criterios de aceptación previa a cada pase a producción."
     },
+    "PuntaAPunta": {
+  "tag": "DESARROLLO PUNTA A PUNTA",
+  "intro": "Diseño estratégico y desarrollo técnico de alto rendimiento, integrado en un solo equipo con un solo objetivo: hacer crecer tu negocio.",
+  "titulo": "Creamos <verde>productos digitales</verde> completos.",
+  "problema_tag": "El problema",
+  "problema_titulo": "Proyectos fragmentados y equipos desconectados",
+  "problema_desc": "Contratar diseñadores, desarrolladores y testers por separado suele generar cuellos de botella, problemas de comunicación y un producto final que no refleja la idea original. Cuando los equipos no trabajan en sincronía, los plazos se alargan, los presupuestos se disparan y la calidad del software se ve comprometida.",
+  "enfoque_tag": "Nuestro Enfoque",
+  "enfoque": {
+    "paso1_tit": "Ideación y Diseño Estratégico",
+    "paso1_desc": "Transformamos tu visión en un plan de acción claro. Definimos la arquitectura del proyecto y creamos interfaces (UI/UX) atractivas, centradas en el usuario y alineadas a tus objetivos comerciales.",
+    "paso2_tit": "Desarrollo Técnico Integral",
+    "paso2_desc": "Pasamos del prototipo a la realidad. Construimos plataformas robustas con código limpio y escalable, asegurando un rendimiento extremo tanto en la interfaz visual como en la lógica del servidor.",
+    "paso3_tit": "Auditoría QA y Lanzamiento",
+    "paso3_desc": "Sometemos el producto a rigurosas pruebas de calidad para garantizar una experiencia de usuario sin fallas. Una vez validado, gestionamos el despliegue final y aseguramos una transición impecable."
+  },
+  "propuesta_tag": "Nuestra Propuesta",
+  "propuesta_tit": "Solución Integral 'Llave en Mano'",
+  "propuesta_desc": "Nos hacemos cargo de todo el ciclo de vida del producto. Desde la primera reunión hasta el despliegue final, un solo equipo cohesionado se encarga del diseño, desarrollo y control de calidad, asegurando que tu visión se mantenga intacta y se ejecute a la perfección.",
+  "entregables_tit": "¿Qué te entregamos?",
+  "entregable_1": "Plataforma digital completa, optimizada y lista para escalar.",
+  "entregable_2": "Código fuente documentado junto con manuales de uso.",
+  "entregable_3": "Reportes detallados de QA y garantía de funcionamiento."
+},
     "CTA": {
       "titulo": "¿Listo para construir <br></br> algo <verde>extraordinario</verde>?",
       "subtitulo": "Contanos de tu proyecto y en menos de 24 horas te entregaremos un diagnóstico inicial sin costo.",
@@ -315,6 +348,8 @@
       "lbl_mensaje": "TU MENSAJE",
       "ph_mensaje": "Contanos sobre tu proyecto, objetivos, tiempos y cualquier detalle relevante...",
       "btn_enviar": "Enviar mensaje",
+      "btn_enviando": "Enviando...",
+      "btn_exito": "¡Mensaje Enviado!",
       "footer_form": "Respondemos en menos de 24 horas hábiles.",
       "info_email_tit": "EMAIL DIRECTO",
       "info_email_val": "design.and.logic.studio@gmail.com",

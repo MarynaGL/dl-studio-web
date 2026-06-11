@@ -9,8 +9,8 @@ export default function ServiceDesign() {
   return (
     <section id="diseno" className="w-full flex justify-center bg-[#f8f8f6] py-20 overflow-hidden">
       
-      {/* EL TUBO MAESTRO (1440px) */}
-      <div className="w-full max-w-[1440px] px-8 lg:px-[60px] flex flex-col">
+      {/* 1. LIBERACIÓN DE BORDES: Eliminamos max-w-[1440px] para que ocupe todo el ancho */}
+      <div className="w-full px-4 md:px-8 lg:px-[60px] relative">
         
         {/* LÍNEA SEPARADORA SUPERIOR Y ETIQUETA */}
         <div className="w-full border-t border-[#939390]/30 pt-4 flex items-center gap-2 mb-10">
@@ -32,10 +32,10 @@ export default function ServiceDesign() {
           </p>
         </div>
 
-        {/* TÍTULO PRINCIPAL (Con renderizado de texto enriquecido) */}
-        <h2 className="text-[48px] lg:text-[64px] font-inter font-bold text-[#18181A] leading-[1.1] tracking-tight max-w-[900px] mb-20">
+        {/* 2. TÍTULO PRINCIPAL: Cambiamos font-bold por font-normal (y le sacamos el font-medium al span verde) */}
+        <h2 className="text-[48px] lg:text-[64px] font-inter font-normal text-[#18181A] leading-[1.1] tracking-tight max-w-[900px] mb-20">
           {t.rich('titulo', {
-            verde: (chunks) => <span className="text-[#6b9e7a] italic font-medium">{chunks}</span>
+            verde: (chunks) => <span className="text-[#6b9e7a] italic">{chunks}</span>
           })}
         </h2>
 
@@ -69,8 +69,8 @@ export default function ServiceDesign() {
             
             {/* Paso 01 */}
             <div className="flex flex-col p-8 lg:p-12 lg:pl-0">
-              <span className="text-[64px] font-inter font-bold text-[#e4e4e4] leading-none mb-6">01</span>
-              <h4 className="text-[16px] font-inter font-bold text-[#18181A] mb-6">{t('metodologia.paso1_tit')}</h4>
+              <span className="text-[64px] font-inter font-light text-[#e4e4e4] leading-none mb-6">01</span>
+              <h4 className="text-[16px] font-inter font-light text-[#18181A] mb-6">{t('metodologia.paso1_tit')}</h4>
               <p className="text-[14px] font-inter font-light text-[#939390] leading-relaxed">
                 {t('metodologia.paso1_desc')}
               </p>
@@ -100,10 +100,9 @@ export default function ServiceDesign() {
        {/* ========================================= */}
         {/* PROPUESTA Y ENTREGABLES                   */}
         {/* ========================================= */}
-        {/* 1. CAJA GRIS PRINCIPAL: Contenedor vertical estándar */}
+        {/* CAJA GRIS PRINCIPAL */}
         <div className="w-full bg-[#e4e4e4] p-10 lg:pt-16 lg:px-16 lg:pb-8 flex flex-col relative">
           
-          {/* 2. CONTENEDOR DE LAS COLUMNAS */}
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-0 w-full">
             
             {/* Lado Izquierdo */}
@@ -141,12 +140,12 @@ export default function ServiceDesign() {
               </div>
             </div>
 
-          </div> {/* FIN DEL CONTENEDOR DE COLUMNAS */}
+          </div> 
 
-          {/* 3. FLECHA REUTILIZABLE */}
+          {/* FLECHA REUTILIZABLE */}
           <ScrollUpArrow />
 
-        </div> {/* FIN DE LA CAJA GRIS */}
+        </div> 
 
       </div>
     </section>

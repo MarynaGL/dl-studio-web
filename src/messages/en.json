@@ -13,6 +13,14 @@
     "btn_proyectos": "Our projects",
     "btn_info": "Learn more"
   },
+  "FeatureBanner": {
+  "design_title": "Design",
+  "design_subtitle": "UI/UX craft",
+  "dev_title": "Development",
+  "dev_subtitle": "Clean code",
+  "qa_title": "Quality",
+  "qa_subtitle": "Zero bugs"
+},
   "Projects": {
     "header_title": "Our work",
     "header_desc": "We always adopt an individualized approach, focusing on the real expectations and requirements of each project.",
@@ -278,6 +286,7 @@
         "paso3_tit": "Culture of Prevention",
         "paso3_desc": "We get involved from the early stages of the project to detect areas for improvement and logical inconsistencies before the development stage."
       },
+
       "auditoria_tag": "Our 'Stand-Alone' Proposal",
       "auditoria_tit": "Testing as a Service",
       "auditoria_desc": "Ideal for development teams that program at high speed and seek to ensure a Senior quality filter. We integrate into your workflow, audit your platform, validate system behavior with technical precision, and give you the peace of mind to launch updates with high stability and optimized performance.",
@@ -286,6 +295,30 @@
       "entregable_2": "Detailed, prioritized improvement reports structured for efficient resolution.",
       "entregable_3": "Quality certification and validation of acceptance criteria prior to each production release."
     },
+    "PuntaAPunta": {
+  "tag": "END-TO-END DEVELOPMENT",
+  "intro": "Strategic design and high-performance technical development, integrated into a single team with one goal: to grow your business.",
+  "titulo": "We build complete <verde>digital products</verde>.",
+  "problema_tag": "The problem",
+  "problema_titulo": "Fragmented projects and disconnected teams",
+  "problema_desc": "Hiring designers, developers, and testers separately often leads to bottlenecks, miscommunication, and a final product that falls short of the original vision. When teams don't work in sync, deadlines extend, budgets inflate, and software quality is severely compromised.",
+  "enfoque_tag": "Our Approach",
+  "enfoque": {
+    "paso1_tit": "Ideation and Strategic Design",
+    "paso1_desc": "We transform your vision into a clear action plan. We define the project's architecture and create attractive, user-centric interfaces (UI/UX) aligned with your business goals.",
+    "paso2_tit": "Comprehensive Technical Development",
+    "paso2_desc": "We take it from prototype to reality. We build robust platforms with clean and scalable code, ensuring extreme performance in both the visual interface and server logic.",
+    "paso3_tit": "QA Audit and Launch",
+    "paso3_desc": "We subject the product to rigorous quality testing to guarantee a flawless user experience. Once validated, we manage the final deployment and ensure a seamless transition."
+  },
+  "propuesta_tag": "Our Proposal",
+  "propuesta_tit": "Turnkey Integral Solution",
+  "propuesta_desc": "We take ownership of the entire product lifecycle. From the first meeting to the final deployment, a single cohesive team handles design, development, and quality control, ensuring your vision remains intact and is executed flawlessly.",
+  "entregables_tit": "What do we deliver?",
+  "entregable_1": "Complete digital platform, optimized and ready to scale.",
+  "entregable_2": "Documented source code along with user manuals.",
+  "entregable_3": "Detailed QA reports and performance guarantee."
+},
     "CTA": {
       "titulo": "Ready to build <br></br> something <verde>extraordinary</verde>?",
       "subtitulo": "Tell us about your project and in less than 24 hours we will provide an initial diagnosis at no cost.",
@@ -328,6 +361,8 @@
       "lbl_mensaje": "YOUR MESSAGE",
       "ph_mensaje": "Tell us about your project, goals, timelines, and any relevant detail...",
       "btn_enviar": "Send message",
+      "btn_enviando": "Sending...",
+      "btn_exito": "Message Sent!",
       "footer_form": "We respond within 24 working hours.",
       "info_email_tit": "DIRECT EMAIL",
       "info_email_val": "design.and.logic.studio@gmail.com",

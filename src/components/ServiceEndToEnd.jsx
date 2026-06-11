@@ -1,61 +1,150 @@
 import React from 'react';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-
+import ScrollUpArrow from './ScrollUpArrow';
 
 export default function ServiceEndToEnd() {
-  // Inicializamos el traductor apuntando a la sección CTA
-  const t = useTranslations('Servicios.CTA');
+  // Conectamos con un nuevo bloque en tus archivos JSON (tendrás que crearlo)
+  const t = useTranslations('Servicios.PuntaAPunta');
 
   return (
-    // Agregamos id="punta-a-punta" para el anclaje del menú
-    <section id="punta-a-punta" className="w-full flex justify-center bg-[#F7F7F7] py-20 overflow-hidden">
+    <section id="punta-a-punta" className="w-full flex justify-center bg-[#f8f8f6] py-20 overflow-hidden">
       
-      {/* EL TUBO MAESTRO (1440px) */}
-      <div className="w-full max-w-[1440px] px-8 lg:px-[60px] flex flex-col items-center">
+      {/* 1. LIBERACIÓN DE BORDES: Sin max-w-[1440px] para ocupar toda la pantalla */}
+      <div className="w-full px-4 md:px-8 lg:px-[60px] relative">
         
-        {/* ========================================= */}
-        {/* CAJA OSCURA: CTA FINAL                    */}
-        {/* ========================================= */}
-        <div className="w-full max-w-[1079px] bg-[#404040] pt-24 px-10 pb-12 lg:px-20 flex flex-col items-center text-center relative">
-          
-          {/* Título Principal (Con soporte para salto de línea y color) */}
-          <h2 className="text-[40px] lg:text-[56px] font-inter font-normal text-white leading-tight mb-8">
-            {t.rich('titulo', {
-              verde: (chunks) => <span className="text-[#6b9e7a] italic font-medium">{chunks}</span>,
-              br: () => <br className="hidden md:block" />
-            })}
-          </h2>
-
-          {/* Subtítulo / Párrafo */}
-          <p className="text-[14px] font-inter font-light text-[#e4e4e4] max-w-[600px] leading-relaxed mb-16">
-            {t('subtitulo')}
-          </p>
-
-          {/* Botones de Acción */}
-          <div className="flex flex-col sm:flex-row items-center gap-8">
-            
-            {/* Botón Principal (Verde) */}
-            <Link 
-            href="/contacto#contacto-form"className="bg-[#6b9e7a] text-white font-inter font-medium text-[16px] py-4 px-8 rounded hover:bg-[#5a8667] transition-colors">
-              {t('btn_conversacion')}
-            </Link>
-            
-            {/* Enlace Secundario */}
-            <Link 
-              href="/portfolio#portfolio-tabs" 
-              className="text-[#939390] font-inter font-light text-[16px] flex items-center gap-2 border-b border-[#939390] pb-1 hover:text-white hover:border-white transition-colors"
-            >
-              {t('btn_trabajos')} <span className="text-lg leading-none">→</span>
-            </Link>
-          </div>
-
-          {/* FLECHA REUTILIZABLE: Centrada al final de la caja oscura */}
-          <div className="mt-8">
-        
-          </div>
-
+        {/* LÍNEA SEPARADORA SUPERIOR Y ETIQUETA */}
+        <div className="w-full border-t border-[#939390]/30 pt-4 flex items-center gap-2 mb-10">
+          <span className="text-[14px] font-inter font-light text-[#939390] uppercase tracking-widest">
+            {t('tag')}
+          </span>
+          <div className="w-12 h-[1px] bg-[#939390]/50"></div>
         </div>
+
+        {/* ========================================= */}
+        {/* HEADER DE LA SECCIÓN                      */}
+        {/* ========================================= */}
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end w-full mb-16">
+          <span className="text-[120px] lg:text-[180px] font-inter font-bold text-[#e4e4e4] leading-none select-none">
+            04
+          </span>
+          <p className="text-[14px] font-inter font-light text-[#939390] max-w-[350px] leading-relaxed mb-6 lg:mb-12">
+            {t('intro')}
+          </p>
+        </div>
+
+        {/* TÍTULO PRINCIPAL: font-normal para mantener la sutileza */}
+        <h2 className="text-[48px] lg:text-[64px] font-inter font-normal text-[#18181A] leading-[1.1] tracking-tight max-w-[900px] mb-20">
+          {t.rich('titulo', {
+            verde: (chunks) => <span className="text-[#6b9e7a] italic">{chunks}</span>
+          })}
+        </h2>
+
+        {/* ========================================= */}
+        {/* CAJA OSCURA: EL PROBLEMA                  */}
+        {/* ========================================= */}
+        <div className="w-full bg-[#404040] p-10 lg:p-16 flex flex-col mb-20">
+          <div className="flex items-center gap-2 mb-10">
+            <span className="text-[14px] font-inter font-medium text-[#6b9e7a]">{t('problema_tag')}</span>
+            <div className="w-16 h-[1px] bg-[#6b9e7a]"></div>
+          </div>
+          
+          <h3 className="text-[20px] font-inter font-bold text-white mb-6">
+            {t('problema_titulo')}
+          </h3>
+          <p className="text-[14px] lg:text-[16px] font-inter font-light text-[#e4e4e4] leading-relaxed max-w-[1000px]">
+            {t('problema_desc')}
+          </p>
+        </div>
+
+        {/* ========================================= */}
+        {/* ENFOQUE / METODOLOGÍA (3 COLUMNAS)        */}
+        {/* ========================================= */}
+        <div className="mb-20">
+          <div className="flex items-center gap-2 mb-12">
+            <span className="text-[14px] font-inter font-light text-[#939390]">{t('enfoque_tag')}</span>
+            <div className="w-20 h-[1px] bg-[#939390]/50"></div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-[#939390]/30 border-y border-[#939390]/30">
+            
+            {/* Paso 01 */}
+            <div className="flex flex-col p-8 lg:p-12 lg:pl-0">
+              <span className="text-[64px] font-inter font-bold text-[#e4e4e4] leading-none mb-6">01</span>
+              <h4 className="text-[16px] font-inter font-bold text-[#18181A] mb-6">{t('enfoque.paso1_tit')}</h4>
+              <p className="text-[14px] font-inter font-light text-[#939390] leading-relaxed">
+                {t('enfoque.paso1_desc')}
+              </p>
+            </div>
+
+            {/* Paso 02 */}
+            <div className="flex flex-col p-8 lg:p-12">
+              <span className="text-[64px] font-inter font-bold text-[#e4e4e4] leading-none mb-6">02</span>
+              <h4 className="text-[16px] font-inter font-bold text-[#18181A] mb-6">{t('enfoque.paso2_tit')}</h4>
+              <p className="text-[14px] font-inter font-light text-[#939390] leading-relaxed">
+                {t('enfoque.paso2_desc')}
+              </p>
+            </div>
+
+            {/* Paso 03 */}
+            <div className="flex flex-col p-8 lg:p-12 lg:pr-0">
+              <span className="text-[64px] font-inter font-bold text-[#e4e4e4] leading-none mb-6">03</span>
+              <h4 className="text-[16px] font-inter font-bold text-[#18181A] mb-6">{t('enfoque.paso3_tit')}</h4>
+              <p className="text-[14px] font-inter font-light text-[#939390] leading-relaxed">
+                {t('enfoque.paso3_desc')}
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+       {/* ========================================= */}
+        {/* PROPUESTA Y ENTREGABLES                   */}
+        {/* ========================================= */}
+        <div className="w-full bg-[#e4e4e4] p-10 lg:pt-16 lg:px-16 lg:pb-8 flex flex-col relative">
+          
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-0 w-full">
+            
+            {/* Lado Izquierdo */}
+            <div className="w-full lg:w-1/2 flex flex-col pr-0 lg:pr-16">
+              <span className="text-[14px] font-inter font-light text-[#939390] mb-6">{t('propuesta_tag')}</span>
+              <h4 className="text-[18px] font-inter font-bold text-[#18181A] mb-6">{t('propuesta_tit')}</h4>
+              <p className="text-[14px] font-inter font-light text-[#939390] leading-relaxed">
+                {t('propuesta_desc')}
+              </p>
+            </div>
+
+            {/* Lado Derecho (Línea divisoria y Entregables) */}
+            <div className="w-full lg:w-1/2 flex flex-col lg:flex-row">
+              <div className="hidden lg:block w-[1px] bg-[#939390]/30 mr-16 h-full"></div>
+              
+              <div className="flex flex-col w-full">
+                <span className="text-[14px] font-inter font-light text-[#939390] mb-8">{t('entregables_tit')}</span>
+                
+                <div className="flex flex-col gap-4">
+                  <div className="bg-white px-6 py-4 flex items-center gap-4">
+                    <div className="w-[10px] h-[10px] rounded-full bg-[#e4e4e4] border border-[#939390]"></div>
+                    <span className="text-[14px] font-inter font-light text-[#939390]">{t('entregable_1')}</span>
+                  </div>
+                  
+                  <div className="bg-white px-6 py-4 flex items-center gap-4">
+                    <div className="w-[10px] h-[10px] rounded-full bg-[#e4e4e4] border border-[#939390]"></div>
+                    <span className="text-[14px] font-inter font-light text-[#939390]">{t('entregable_2')}</span>
+                  </div>
+
+                  <div className="bg-white px-6 py-4 flex items-center gap-4">
+                    <div className="w-[10px] h-[10px] rounded-full bg-[#e4e4e4] border border-[#939390]"></div>
+                    <span className="text-[14px] font-inter font-light text-[#939390]">{t('entregable_3')}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div> 
+
+          {/* FLECHA REUTILIZABLE */}
+          <ScrollUpArrow />
+
+        </div> 
 
       </div>
     </section>
