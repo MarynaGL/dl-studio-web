@@ -155,9 +155,9 @@ export default function Projects() {
               </div>
               
               <div className="mt-4">
-                <Link href="/solicitud">
+                <Link href="/contacto">
                   <button className="border-2 border-[#18181A] px-8 py-2 rounded-lg text-sm font-medium text-[#18181A] hover:bg-[#60A572] hover:border-[#60A572] hover:text-white transition-all duration-300">
-                    Dejar una solicitud
+                    {t('btn_solicitud')}
                   </button>
                 </Link>
               </div>

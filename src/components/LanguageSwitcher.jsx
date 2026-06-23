@@ -7,7 +7,7 @@ const locales = [
   { code: 'es', name: 'ES', country: 'ar' },
   { code: 'en', name: 'EN', country: 'gb' }, // gb = Great Britain
   { code: 'ru', name: 'RU', country: 'ru' },
-  { code: 'uk', name: 'UK', country: 'ua' }  // ua = Ukraine
+  { code: 'uk', name: 'UA', country: 'ua' }  // ua = Ukraine
 ];
 
 export default function LanguageSwitcher() {

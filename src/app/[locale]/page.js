@@ -5,20 +5,26 @@ import Projects from '@/components/Projects';
 import { getTranslations } from 'next-intl/server';
 
 // Esta función mágica le dice a Google de qué trata tu página en cada idioma
-export async function generateMetadata({ params: { locale } }) {
+export async function generateMetadata({ params }) {
+  // 1. Primero esperamos a que Next.js resuelva los parámetros
+  const { locale } = await params;
+  
+  // 2. Luego usamos el idioma para traducir
   const t = await getTranslations({ locale, namespace: 'SEO' });
 
   return {
     title: t('titulo'),
     description: t('descripcion'),
-    // Esto genera etiquetas para redes sociales (cuando pasas el link por WhatsApp)
+    icons: {
+      icon: '/favicon.ico',
+    },
     openGraph: {
       title: t('titulo'),
       description: t('descripcion'),
       url: 'https://www.designandlogic.com',
       siteName: 'Diseño & Lógica',
       type: 'website',
-      images: ['/Vector.png'],
+      images: ['/opengraph-image.png'], 
     },
   };
 }

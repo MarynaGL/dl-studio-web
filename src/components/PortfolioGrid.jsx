@@ -28,29 +28,29 @@ const ProjectCard = ({ project, t, openModal }) => {
     <div className="w-full flex flex-col shadow-sm">
       
       {/* --- FRAME SUPERIOR (Gris) --- */}
-      <div className="w-full h-auto md:h-[360px] bg-[#edede8] p-[30px] flex flex-col md:flex-row justify-between relative">
+      <div className="w-full h-auto md:min-h-[360px] bg-[#edede8] p-6 lg:p-[30px] flex flex-col md:flex-row justify-between gap-6 lg:gap-8 relative overflow-hidden">
         
         {/* Textos y Botón */}
-        <div className="w-full md:w-[285px] flex flex-col justify-between gap-6 md:gap-0 h-auto md:h-full z-10">
-          <p className="text-[14px] font-inter font-light text-[#939390] leading-[25.9px]">
+        <div className="flex-1 flex flex-col justify-between h-auto z-10 w-full md:pr-4">
+          <p className="text-[14px] font-inter font-light text-[#939390] leading-[25.9px] mb-6 md:mb-0">
             {t(`${project.key}.top_desc`)}
           </p>
           
-          {/* BOTÓN "VER MÁS" (Siempre es un link ahora) */}
+          {/* BOTÓN "VER MÁS" */}
           <a 
             href={project.link || "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-[146px] h-[40px] rounded-[8px] bg-[#f8f8f6] border border-[#939390] text-[#404040] font-inter font-normal text-[16px] leading-none flex items-center justify-center hover:bg-[#6b9e7a] hover:border-[#6b9e7a] hover:text-[#f8f8f6] transition-all duration-300 mt-auto"
+            className="w-[146px] h-[40px] rounded-[8px] bg-[#f8f8f6] border border-[#939390] text-[#404040] font-inter font-normal text-[16px] leading-none flex items-center justify-center hover:bg-[#6b9e7a] hover:border-[#6b9e7a] hover:text-[#f8f8f6] transition-all duration-300 md:mt-auto"
           >
             {t(`${project.key}.btn_ver_mas`)}
           </a>
         </div>
 
-        {/* --- CARRUSEL DE IMÁGENES (Click para abrir Modal) --- */}
+        {/* --- CARRUSEL DE IMÁGENES --- */}
         <div 
           onClick={() => openModal(images, currentIndex)}
-          className="w-full md:w-[303px] h-[240px] mt-8 md:mt-0 relative md:absolute md:top-[60px] md:right-[14px] rounded-[10px] overflow-hidden shadow-md group bg-[#e4e4e4] cursor-pointer"
+          className="w-full md:w-[260px] xl:w-[303px] h-[240px] flex-shrink-0 relative rounded-[10px] overflow-hidden shadow-md group bg-[#e4e4e4] cursor-pointer md:mt-[30px]"
         >
           <Image
             src={images[currentIndex]}
@@ -60,26 +60,21 @@ const ProjectCard = ({ project, t, openModal }) => {
             className="object-cover transition-opacity duration-300 group-hover:scale-105"
           />
           
-          {/* Controles del Carrusel (Se muestran solo si hay más de 1 imagen) */}
+          {/* Controles del Carrusel */}
           {images.length > 1 && (
             <>
-              {/* Flecha Izquierda */}
               <button 
                 onClick={prevImage}
                 className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center bg-black/40 hover:bg-black/70 rounded-full text-white text-[12px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"
               >
                 &#10094;
               </button>
-              
-              {/* Flecha Derecha */}
               <button 
                 onClick={nextImage}
                 className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center bg-black/40 hover:bg-black/70 rounded-full text-white text-[12px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"
               >
                 &#10095;
               </button>
-
-              {/* Puntitos Indicadores (Dots) */}
               <div className="absolute bottom-3 left-0 w-full flex justify-center gap-[6px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
                 {images.map((_, idx) => (
                   <div 
@@ -92,7 +87,6 @@ const ProjectCard = ({ project, t, openModal }) => {
           )}
         </div>
       </div>
-
       {/* --- FRAME INFERIOR (Blanco) --- */}
       <div className="w-full bg-white pt-[24px] px-[28px] pb-[28px] flex flex-col">
         <span className="text-[12px] font-inter font-normal text-[#939390] tracking-[0.5px] uppercase mb-4 block">
@@ -145,12 +139,13 @@ export default function PortfolioGrid({ activeTab }) {
 
   // --- DATOS DE LOS PROYECTOS ---
   const projectsData = [
+    
     { 
-      key: 'proy_1', 
-      thumb: '/Port1.png', 
-      categoryTab: 'tab_2',
-      gallery: ['/Port1-1.png', '/Port1-2.png', '/Port1-3.png', '/Port1-4.png'],
-      link: 'https://www.behance.net/gallery/159586143/Tattoo-Studio-Web-Design' 
+      key: 'proy_7', 
+      thumb: '/Port7.png', 
+      categoryTab: 'tab_5',
+      gallery: ['/Port7-1.png','/Port7-2.png', '/Port7-3.png'],
+      link: 'https://oasiszen.com.ar/'
     },
     { 
       key: 'proy_2', 
@@ -188,12 +183,13 @@ export default function PortfolioGrid({ activeTab }) {
       link: 'http://autochehol.com.ua/'
     },
     { 
-      key: 'proy_7', 
-      thumb: '/Port7.png', 
-      categoryTab: 'tab_5',
-      gallery: ['/Port7-1.png','/Port7-2.png', '/Port7-3.png'],
-      link: 'https://oasiszen.com.ar/'
+      key: 'proy_1', 
+      thumb: '/Port1.png', 
+      categoryTab: 'tab_2',
+      gallery: ['/Port1-1.png', '/Port1-2.png', '/Port1-3.png', '/Port1-4.png'],
+      link: 'https://www.behance.net/gallery/159586143/Tattoo-Studio-Web-Design' 
     },
+    
     { 
       key: 'proy_8', 
       thumb: '/Port8.png', 
