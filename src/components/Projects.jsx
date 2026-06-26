@@ -95,7 +95,7 @@ export default function Projects() {
           {features.map((feat, index) => (
             <div key={index} className="w-full flex flex-col items-start text-left">
               <div className="w-full flex justify-center mb-6">
-                <div className="relative w-[120px] h-[120px]">
+                <div className="relative w-30 h-[120px]">
                   <Image src={feat.icon} alt={feat.title} fill sizes="120px" className="object-contain" />
                 </div>
               </div>
@@ -121,6 +121,7 @@ export default function Projects() {
               </p>
             </div>
           </div>
+
             
           {/* Selector de Países y Datos */}
           <div className="w-full lg:w-1/2 flex flex-col items-start lg:items-end">
